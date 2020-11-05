@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 100px auto;
 }
 
-.App-link {
-  color: #61dafb;
+table {
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+th, td {
+  padding: 10px;
+  border: 1px solid;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+.modal__window {
+  width: 600px;
+  height: 450px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 0 auto;
+  transform: translateY(-200px);
+  background: #fff;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.modal__title {
+  font-size: 16px;
+}
+
+.modal__body {
+  margin: 50px auto;
+  height: 200px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.modal__window, .modal__overlay {
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal.open .modal__window,
+.modal.open .modal__overlay {
+  opacity: 1;
+  z-index: 200;
+}
+
+.modal.open .modal__overlay {
+  background: rgba(0, 0, 0, .5);
+}
+
+.modal.open .modal__window {
+  transform: translateY(100px);
+}
+
+.modal__row {
+  display: flex;
+  justify-content: space-between;
 }
