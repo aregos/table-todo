@@ -87,7 +87,6 @@ const Table = () => {
     return (!tasks.length) ? (
         <div>
             <span>У вас пока нет задач</span>
-            {/*<button onClick={addTask}>Добавить задачу</button>*/}
         </div>
     ) : (
         <div>
