@@ -23,7 +23,7 @@ const Modal = (props, content) => {
                 <div className="modal__window">
                     <div className="modal__header">
                         <span className="modal__title">Редактировать</span>
-                        <span className="modal_close" onClick={onClose}>&times;</span>
+                        <span className="modal__close" onClick={onClose}>&times;</span>
                     </div>
                     <div className="modal__body">
                             <div className="modal__row">

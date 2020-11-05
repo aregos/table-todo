@@ -53,6 +53,7 @@ const Table = () => {
             newState[index] = {...newState[index], ...editedProps}
             return newState
         })
+        setIsModalOpen(false)
     }
 
     const handleDeleteTask = (id) => () => {
